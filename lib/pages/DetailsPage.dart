@@ -43,7 +43,7 @@ class _DetailsPageState extends State<DetailsPage> {
           icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
         ),
-        title: Text(item.title),
+        title: Text(item.name),
         centerTitle: false,
         elevation: 0.0,
       ),
@@ -54,7 +54,7 @@ class _DetailsPageState extends State<DetailsPage> {
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20.0),
+                padding: const EdgeInsets.symmetric(vertical: 40.0),
                 child: SizedBox(
                   width: size.width,
                     height: 160,
@@ -64,6 +64,10 @@ class _DetailsPageState extends State<DetailsPage> {
                     )
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Text(item.details, style: const TextStyle(fontSize: 15),),
+              )
             ],
           ),
         ),

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sun",
+    "image": "sun.png",
+    "name": "Sole",
+    "details": "Il Sole è la stella madre del sistema solare, e di gran lunga il suo principale componente. La sua grande massa gli permette di sostenere la fusione nucleare, che rilascia enormi quantità di energia, per la maggior parte irradiata nello spazio come radiazione elettromagnetica, in particolare luce visibile. Il Sole viene classificato come una nana gialla, anche se come nome è ingannevole in quanto, rispetto ad altre stelle nella nostra galassia, il Sole è piuttosto grande e luminoso. Le stelle vengono classificate in base al diagramma Hertzsprung-Russell, un grafico che mette in relazione la temperatura effettiva e la luminosità delle stelle. In generale più una stella è calda più è luminosa: le stelle che seguono questo modello sono appartenenti alla sequenza principale, e il sole si trova proprio al centro di questa sequenza. Tuttavia stelle più luminose e calde del Sole sono rare, mentre stelle meno luminose e più fredde sono molto comuni."
+  },
+  {
+    "id": "mercury",
+    "image": "mercury.png",
+    "name": "Mercurio",
+    "details": "Mercurio (0,4 au) è il pianeta più vicino al Sole ed è anche il più piccolo (0,055 masse terrestri). Mercurio non possiede satelliti naturali e le sue sole formazioni geologiche conosciute, oltre ai crateri da impatto, sono creste sporgenti o rupes, probabilmente prodotte durante una fase di contrazione avvenuta nella sua storia primordiale. Il pianeta è senza atmosfera, fatta eccezione per esili tracce di gas probabilmente frutto dell'interazione del vento solare con la superficie del pianeta. Questo fa sì che siano assenti fenomeni atmosferici e che l'escursione termica fra il giorno e la notte sia elevatissima. Durante il giorno il suolo raggiunge i 427 °C, mentre di notte può arrivare a -180 °C. Il suo nucleo relativamente grande e il suo mantello sottile non sono ancora stati spiegati adeguatamente: l'ipotesi principale riporta la possibilità che gli strati esterni siano stati strappati via da un impatto gigantesco. Benché assai splendente è molto difficile osservarlo perché ha il moto molto rapido, in più visto che è vicino al Sole è sempre immerso nei chiarori."
+  },
+  {
+    "id": "venus",
+    "image": "venus.png",
+    "name": "Venere",
+    "details": "Venere (0,7 au) è per dimensioni molto simile alla Terra (0,815 masse terrestri), e, come la Terra, ha un mantello composto da silicati attorno a un nucleo ferroso, possiede un'atmosfera e l'attività sulla sua superficie rende evidente la presenza di attività geologica interna. Tuttavia è molto più asciutto della Terra, e la sua atmosfera è novanta volte più densa. Venere non ha satelliti naturali. Esso è il pianeta più caldo del sistema solare, con temperature superficiali superiori ai 450 °C, molto probabilmente a causa della quantità di gas che provoca effetto serra nell'atmosfera. Non sono state individuate prove definitive delle attuali attività geologiche su Venere, ma si potrebbe pensare che la sua densa atmosfera sia regolarmente alimentata da eruzioni vulcaniche."
+  },
+  {
+    "id": "earth",
+    "image": "earth.png",
+    "name": "Terra",
+    "details": "La Terra (1 UA) è il più grande e denso dei pianeti interni, l'unico in cui sono conosciute attuali attività geologiche, ed è probabilmente l'unico pianeta del sistema solare che permette la vita (l'unico su cui la vita è sicuramente presente). La sua idrosfera liquida è unica tra i pianeti interni, ed è anche l'unico pianeta dove siano state osservate placche tettoniche. L'atmosfera terrestre è estremamente differente rispetto a quella degli altri pianeti, poiché è stata alterata dalla presenza della vita ed è composta per il 21% di ossigeno. Possiede un satellite naturale, la Luna."
+  },
+  {
+    "id": "mars",
+    "image": "mars.png",
+    "name": "Marte",
+    "details": "Marte (1,6 au) è più piccolo della Terra e di Venere (0,107 masse terrestri). Possiede un'atmosfera tenue, composta principalmente da anidride carbonica. La sua superficie, costellata di vulcani, come il grande Olympus Mons, e da rift valley, come la Valles Marineris, mostra attività geologica che ha persistito fino a tempi relativamente recenti. Il suo colore rosso deriva dalla presenza della ruggine del suolo, ricco di ferro. Marte ha due piccoli satelliti naturali (Deimos e Fobos), che si pensa siano asteroidi catturati dal suo campo gravitazionale."
+  },
+  {
+    "id": "jupiter",
+    "image": "jupiter.png",
+    "name": "Giove",
+    "details": "Giove (5,2 UA), con 318 masse terrestri, possiede 2,5 volte la massa di tutti gli altri pianeti messi insieme. Dista 778 milioni di chilometri dal Sole, e impiega circa 12 anni terrestri per percorrere un'orbita completa. La sua densità è molto bassa (circa 1,3 kg/dm³) con venti che raggiungono circa 600 km/h; infatti, esso è un pianeta prevalentemente gassoso, composto da elementi molto leggeri, come idrogeno ed elio. Probabilmente nella zona centrale si trova un nucleo solido a una temperatura molto elevata. Il forte calore interno di Giove crea una serie di caratteristiche semipermanenti nella sua atmosfera, come ad esempio la famosa Grande Macchia Rossa. Giove ha 79 satelliti naturali conosciuti: i quattro più grandi, Ganimede, Callisto, Io, e Europa, mostrano analogie con i pianeti terrestri, come fenomeni di vulcanismo e calore interno."
+  },
+  {
+    "id": "saturn",
+    "image": "saturn.png",
+    "name": "Saturno",
+    "details": "Saturno (9,5 UA), distinto dal suo sistema di anelli, ha diverse analogie con Giove, come la sua composizione atmosferica. Saturno è molto meno massiccio, essendo solo 95 masse terrestri. Sono noti 82 satelliti, due dei quali, Titano e Encelado, mostrano segni di attività geologica, anche se sono in gran parte criovulcani. Titano è più grande di Mercurio ed è l'unico satellite del sistema solare ad avere una atmosfera densa formata da azoto e metano."
+  },
+  {
+    "id": "uranus",
+    "image": "uranus.png",
+    "name": "Urano",
+    "details": "Urano (19,6 UA), con 14 masse terrestri, è il pianeta esterno meno massiccio. Unico tra i pianeti, esso orbita attorno al Sole con una inclinazione assiale superiore a 90° rispetto all'eclittica forse data da un impatto con un altro corpo di 2,75 masse terrestri durante la sua formazione. Ha un nucleo molto freddo rispetto agli altri giganti gassosi, quindi irradia pochissimo calore nello spazio. Urano ha 27 satelliti noti, tra cui i più grandi sono Titania, Oberon, Umbriel, Ariel e Miranda."
+  },
+  {
+    "id": "neptune",
+    "image": "neptune.png",
+    "name": "Nettuno",
+    "details": "Nettuno (30 UA), anche se leggermente più piccolo di Urano, è più massiccio (equivalente a 17 masse terrestri) e quindi più denso. Esso irradia più calore interno rispetto a Urano, ma non tanto quanto Giove o Saturno. Nettuno ha 14 satelliti noti. Il più grande, Tritone, è geologicamente attivo, con geyser di azoto liquido. Tritone è l'unico grande satellite con orbita e direzione retrograda. Nettuno è accompagnato nella sua orbita da una serie di planetoidi che sono in risonanza orbitale 1:1 con esso."
+  },
+  {
+    "id": "pluto",
+    "image": "pluto.png",
+    "name": "Plutone",
+    "details": "Plutone (39 UA) è un pianeta nano, ed è il più grande oggetto conosciuto della fascia di Kuiper. Quando venne scoperto, nel 1930, fu ritenuto il nono pianeta del sistema solare, ma nel 2006 è stato riclassificato in pianeta nano, dopo l'adozione di una definizione formale di pianeta. Plutone ha un'orbita relativamente eccentrica, inclinata di 17 gradi rispetto al piano dell'eclittica, e il suo perielio si trova a 29,7 UA dal Sole, all'interno dell'orbita di Nettuno, mentre l'afelio è situato a 49,5 UA dal Sole."
+  }
+]

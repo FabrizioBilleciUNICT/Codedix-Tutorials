@@ -1,4 +1,5 @@
 
+import 'package:codedix_tutorials/utils/data_service.dart';
 import 'package:flutter/material.dart';
 import '../models/SystemItem.dart';
 
@@ -12,19 +13,18 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   late Size size;
+  List<SystemItem> list = [];
 
-  final List<SystemItem> list = [
-    SystemItem(id: 'sun', image: 'sun.png', title: 'Sole'),
-    SystemItem(id: 'mercury', image: 'mercury.png', title: 'Mercurio'),
-    SystemItem(id: 'venus', image: 'venus.png', title: 'Venere'),
-    SystemItem(id: 'earth', image: 'earth.png', title: 'Terra'),
-    SystemItem(id: 'mars', image: 'mars.png', title: 'Marte'),
-    SystemItem(id: 'jupiter', image: 'jupiter.png', title: 'Giove'),
-    SystemItem(id: 'saturn', image: 'saturn.png', title: 'Saturno'),
-    SystemItem(id: 'uranus', image: 'uranus.png', title: 'Urano'),
-    SystemItem(id: 'neptune', image: 'neptune.png', title: 'Nettuno'),
-    SystemItem(id: 'pluto', image: 'pluto.png', title: 'Plutone'),
-  ];
+  void loadData() async {
+    list = await DataService().loadData();
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +34,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       body: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
         slivers: [
           SliverAppBar(
             expandedHeight: size.width * 0.625,
@@ -51,43 +52,48 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               centerTitle: false,
-              title: const Text('Sistema Solare'),
+              title: const Text('Il Sistema Solare'),
             ),
           ),
-          SliverAnimatedList(
-            initialItemCount: list.length,
-            itemBuilder: (context, index, animation) =>
-                SizeTransition(
-                    sizeFactor: animation,
-                    child: InkWell(
-                      onTap: () => Navigator.of(context).pushNamed('/details', arguments: { 'item': list[index]}),
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            child: Row(
-                              children: [
-                                Padding(
-                                    padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
-                                    child: Hero(
-                                        tag: list[index].id,
-                                        child: Image.asset('assets/${list[index].image}', height: 60.0,)
-                                    )
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 8.0),
-                                  child: Text(list[index].title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                            child: Container(height: 0.8, color: Colors.grey[600]),
-                          )
-                        ],
-                      ),
+          SliverList(delegate: SliverChildBuilderDelegate(
+              childCount: list.length, (context, index) {
+            return InkWell(
+              onTap: () =>
+                  Navigator.of(context).pushNamed(
+                      '/details', arguments: { 'item': list[index]}),
+              child: Column(
+                children: [
+                  SizedBox(
+                    child: Row(
+                      children: [
+                        Padding(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 12.0, horizontal: 16.0),
+                            child: Hero(
+                                tag: list[index].id,
+                                child: Image.asset(
+                                  'assets/${list[index].image}',
+                                  height: 60.0,)
+                            )
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Text(list[index].name,
+                              style: const TextStyle(fontSize: 18,
+                                  fontWeight: FontWeight.w500)),
+                        ),
+                      ],
                     ),
-                )
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Container(height: 0.8,
+                        color: Colors.grey[600]),
+                  )
+                ],
+              ),
+            );
+          })
           ),
         ],
       ),
