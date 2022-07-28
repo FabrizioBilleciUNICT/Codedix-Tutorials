@@ -1,4 +1,3 @@
-import 'package:codedix_tutorials/pages/DetailsPage.dart';
 import 'package:codedix_tutorials/pages/HomePage.dart';
 import 'package:flutter/material.dart';
 
@@ -16,14 +15,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Codedix Tutorials',
         darkTheme: ThemeData.dark(),
-        themeMode: ThemeMode.system,
+        themeMode: ThemeMode.dark,
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
         initialRoute: '/',
         routes: {
           '/': (context) => const HomePage(),
-          '/details': (context) => const DetailsPage(),
         }
     );
   }

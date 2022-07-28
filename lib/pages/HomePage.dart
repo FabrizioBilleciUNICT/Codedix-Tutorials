@@ -1,5 +1,4 @@
 
-import 'package:codedix_tutorials/utils/data_service.dart';
 import 'package:flutter/material.dart';
 import '../models/SystemItem.dart';
 
@@ -13,18 +12,18 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   late Size size;
-  List<SystemItem> list = [];
-
-  void loadData() async {
-    list = await DataService().loadData();
-    setState(() {});
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    loadData();
-  }
+  List<SystemItem> list = [
+      SystemItem(id: 'sun', image: 'sun.png', name: 'Sole'),
+      SystemItem(id: 'mercury', image: 'mercury.png', name: 'Mercurio'),
+      SystemItem(id: 'venus', image: 'venus.png', name: 'Venere'),
+      SystemItem(id: 'earth', image: 'earth.png', name: 'Terra'),
+      SystemItem(id: 'mars', image: 'mars.png', name: 'Marte'),
+      SystemItem(id: 'jupiter', image: 'jupiter.png', name: 'Giove'),
+      SystemItem(id: 'saturn', image: 'saturn.png', name: 'Saturno'),
+      SystemItem(id: 'uranus', image: 'uranus.png', name: 'Urano'),
+      SystemItem(id: 'neptune', image: 'neptune.png', name: 'Nettuno'),
+      SystemItem(id: 'pluto', image: 'pluto.png', name: 'Plutone'),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -34,13 +33,12 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       body: CustomScrollView(
-        physics: const BouncingScrollPhysics(),
         slivers: [
           SliverAppBar(
             expandedHeight: size.width * 0.625,
-            floating: true,
+            floating: false,
             pinned: true,
-            snap: true,
+            snap: false,
             flexibleSpace: FlexibleSpaceBar(
               background: Container(
                 decoration: const BoxDecoration(
@@ -58,9 +56,7 @@ class _HomePageState extends State<HomePage> {
           SliverList(delegate: SliverChildBuilderDelegate(
               childCount: list.length, (context, index) {
             return InkWell(
-              onTap: () =>
-                  Navigator.of(context).pushNamed(
-                      '/details', arguments: { 'item': list[index]}),
+              onTap: () {},
               child: Column(
                 children: [
                   SizedBox(
@@ -68,27 +64,33 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Padding(
                             padding: const EdgeInsets.symmetric(
-                                vertical: 12.0, horizontal: 16.0),
-                            child: Hero(
-                                tag: list[index].id,
-                                child: Image.asset(
-                                  'assets/${list[index].image}',
-                                  height: 60.0,)
+                                vertical: 12.0,
+                                horizontal: 16.0
+                            ),
+                            child: Image.asset(
+                              'assets/${list[index].image}',
+                              height: 60.0
                             )
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 8.0),
-                          child: Text(list[index].name,
-                              style: const TextStyle(fontSize: 18,
-                                  fontWeight: FontWeight.w500)),
+                          child: Text(
+                              list[index].name,
+                              style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500
+                              )
+                          ),
                         ),
                       ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Container(height: 0.8,
-                        color: Colors.grey[600]),
+                    child: Container(
+                        height: 0.8,
+                        color: Colors.grey[600]
+                    ),
                   )
                 ],
               ),
