@@ -1,8 +1,7 @@
 import 'package:codedix_tutorials/pages/HomePage.dart';
 import 'package:flutter/material.dart';
 
-// u/parswimcube [background]
-// <a href="https://www.flaticon.com/free-icons/sun" title="sun icons">Sun icons created by Freepik - Flaticon</a>
+
 void main() {
   runApp(const MyApp());
 }

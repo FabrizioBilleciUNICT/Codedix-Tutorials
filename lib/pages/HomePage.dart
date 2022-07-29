@@ -33,6 +33,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       body: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
         slivers: [
           SliverAppBar(
             expandedHeight: size.width * 0.625,
